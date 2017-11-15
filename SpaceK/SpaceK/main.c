@@ -108,8 +108,8 @@ void control(void) {
 			// 움직임에 따른 배열값 바꿔주기
 			if (chr == 72) { //상
 				i = i - 1;
-				map[i-1][j] = 0;
-				if (map[i][j + 1] == 0) {
+				map[i+1][j] = 0;
+				if (map[i+1][j] == 0) {
 					gotoxy(3 * j, i + 1);
 					printf("   ");
 				}
@@ -121,8 +121,8 @@ void control(void) {
 			}
 			else if (chr == 80) { //하
 				i = i + 1;
-				map[i - 1][y] = 0;
-				if (map[i][j + 1] == 0) {
+				map[i - 1][j] = 0;
+				if (map[i-1][j] == 0) {
 					gotoxy(3 * j, i - 1);
 					printf("   ");
 				}
